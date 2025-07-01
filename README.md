@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Todo App com React e Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação de lista de tarefas (Todo List) desenvolvida em React, utilizando o [React Redux](https://react-redux.js.org/) para gerenciamento de estado global. O objetivo é demonstrar como criar, marcar como concluídas e remover tarefas de forma eficiente, com persistência local dos dados.
 
-## Available Scripts
+## O que foi feito
 
-In the project directory, you can run:
+- **Interface moderna**: Utilização de componentes funcionais do React e estilização em CSS.
+- **Gerenciamento de estado global**: Implementado com Redux, facilitando o controle e atualização da lista de tarefas em toda a aplicação.
+- **Persistência local**: As tarefas são salvas no `localStorage`, garantindo que não sejam perdidas ao recarregar a página.
+- **Componentização**: Separação clara entre componentes como lista, item, formulário e modal.
+- **Ações e reducers**: Uso de actions e reducers para adicionar, remover e marcar tarefas como concluídas.
+
+## Sobre React Redux
+
+O [React Redux](https://react-redux.js.org/) conecta o Redux ao React, permitindo que componentes acessem e atualizem o estado global da aplicação de forma eficiente. O ciclo de vida básico do React Redux é:
+
+1. **Ação (Action)**: O usuário interage com a interface e dispara uma ação.
+2. **Dispatch**: A ação é enviada (dispatch) para o Redux.
+3. **Reducer**: O reducer recebe a ação e atualiza o estado global conforme necessário.
+4. **Store**: O novo estado é armazenado na store do Redux.
+5. **Componentes**: Os componentes conectados ao Redux recebem o novo estado e são re-renderizados automaticamente.
+
+Hooks como `useSelector` e `useDispatch` facilitam o acesso ao estado e o envio de ações nos componentes React.
+
+## Como rodar o projeto
+
+No diretório do projeto, execute:
+
+### `npm install`
+
+Instala as dependências necessárias.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Roda o app em modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Cria uma versão otimizada para produção na pasta `build`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Estrutura dos principais arquivos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `src/App.js`: Componente principal, integra Redux e controla o modal.
+- `src/components/`: Componentes reutilizáveis como lista, item, formulário e modal.
+- `src/reducers/listReducer.js`: Lógica de atualização da lista de tarefas.
+- `src/actions/listAction.js`: Actions para manipular as tarefas.
 
-### `npm run eject`
+## Aprenda mais
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Documentação do React](https://reactjs.org/)
+- [Documentação do Redux](https://redux.js.org/)
+- [Documentação do React Redux](https://react-redux.js.org/)
